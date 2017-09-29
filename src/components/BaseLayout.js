@@ -7,8 +7,8 @@ export default class BaseLayout extends Component{
     return(
       <div>
         <div className="navigation_content">
-      <NavLink activeClassName="selected" to='/users'>Users</NavLink>
-      <NavLink activeClassName="selected" to='/'>Home</NavLink>
+      <NavLink className="nav_button" activeClassName="selected" to='/users'>Users</NavLink>
+      <NavLink className="nav_button" activeClassName="selected" to='/'>Home</NavLink>
         </div>
       {this.props.children}
       </div>

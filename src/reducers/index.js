@@ -30,9 +30,10 @@ const reducer = function(state = initialState, action) {
 
         */
         case WITHDRAW_FUNDS:
-            const userIdx = state.users.findIndex(user => user._id === state.selectedUser);
-            const accountIdx = state.users[userIdx].accounts.findIndex(account => account.id === state.selectedAccount);
-
+            const userIdx = state.users.findIndex(user => user._id === state.selectedUser._id);
+            const accountIdx = state.users[userIdx].accounts.findIndex(account => account.id === state.selectedAccount.id);
+            console.log(userIdx, "this is user._id %%%%%%%%%%%%%%%%reducers");
+            console.log(accountIdx, "this is account.id%%%%%%%%%%%%reducers");
             return update(state, {
                 users: {
                     [userIdx]: {
@@ -40,6 +41,7 @@ const reducer = function(state = initialState, action) {
                             [accountIdx]: {
                                 balance: {
                                     $apply: function(balance) {
+                                      console.log("NEW BALANCE!!!!", balance - action.payload);
                                         return balance - action.payload
                                     }
                                 }
