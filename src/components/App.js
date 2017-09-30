@@ -17,7 +17,8 @@ class App extends Component {
             <hr className= "my-4"/>
             <p>Quick, fast, and sometimes accurate account results. </p>
             <p className= "lead">
-              <Link style={{color: 'green', textDecoration: "none"}} className= "" to="/users" role="button">*Click here for a list of accounts to access*</Link>
+              <Link style={{color: 'red', textDecoration: "none"}} className= "" to="/users" role="button">
+              *Click here for unrestricted access to an account of your choosing*</Link>
               </p>
             </div>
         </div>

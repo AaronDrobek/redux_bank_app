@@ -14,8 +14,8 @@ class UserList extends Component {
             console.log(this.props.users, "this is users in UserList");
             return (
 
-                <li key={user._id} className="list-group-item" onClick={() => this.props.selectUser(user)}>
-                  <Link to={`${match.url}/${user._id}`}>{user.name}</Link>
+                <li className="list-group-item" key={user._id}  onClick={() => this.props.selectUser(user)}>
+                  <Link className="list-group-item" to={`${match.url}/${user._id}`}>{user.name}</Link>
                 </li>
             );
         });
@@ -23,9 +23,10 @@ class UserList extends Component {
 
             <div className="">
               <h5>Users with open accounts:</h5>
-              <ul>
+              <ul className="list-group-item" >
                 {users}
               </ul>
+              <Link to="/"><button className='btn-btn'>Home</button></Link>
             </div>
         );
     }

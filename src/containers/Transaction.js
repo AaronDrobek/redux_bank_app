@@ -55,6 +55,8 @@ class Transaction extends Component{
       <button onClick={this.depositFive} style={{color: 'white', backgroundColor: 'blue'}}className="btn btn-primary"> $5</button>
       <button onClick={this.depositTen} style={{color: 'white', backgroundColor: 'green'}}className="btn btn-primary"> $10</button>
       <button onClick={this.depositTwenty} style={{color: 'white', backgroundColor: 'orange'}}className="btn btn-primary"> $20</button>
+      <button style= {{color: 'white', backgroundColor: 'red', marginLeft: "2vw"}}><Link  style={{color: "white", textDecoration: 'none'}} to={`/users/${this.props.user.id}`} >Cancel</Link></button>
+
       </div>
       </div>
     )

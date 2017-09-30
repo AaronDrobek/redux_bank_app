@@ -33,7 +33,8 @@ class UserDetail extends Component {
         <div key={account.id}>
           <Link
             onClick={() => this.props.selectAccount(account)}
-            to={`${match.url}/${account.id}/${account.accountType}`}>{account.accountType}</Link>
+            to={`${match.url}/${account.id}/${account.accountType}`}><button className="btn-primary">
+            {account.accountType}</button></Link>
         </div>
 
       )
@@ -43,16 +44,20 @@ class UserDetail extends Component {
         <div className= "card">
           <div className= "card-block">
             <h4 className= "card-title">Account Information</h4>
-            <h6 className= "card-subtitle mb-2 text-muted">{this.props.user.name}</h6>
+            <h4 className= "">{this.props.user.name}</h4>
             <div className= "card-text">
-              <div>{this.props.user.email}</div>
-              <div>{this.props.user.phone}</div>
-              <div>{this.props.user.address}</div>
+              <div>Email: {this.props.user.email}</div>
+              <div>Phone: {this.props.user.phone}</div>
+              <div>Address: {this.props.user.address}</div>
 
             </div>
+            <p>Select Account:</p>
             {accounts}
           </div>
-          <Link className="btn btn-primary" to="/users" >Back to List of Users</Link>
+          <Link   to="/users" ><button style={{marginLeft: '2vw', marginBottom: ".5vw", backgroundColor: 'rgb(0,64,0)',
+          color: 'white',
+           textDecoration: 'none'}}>
+          Back to List of Users</button></Link>
         </div>
 
 

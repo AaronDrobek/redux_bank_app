@@ -31,9 +31,9 @@ class AccountDetail extends Component{
         <h3>Account Information</h3>
         <p> {this.props.account.accountType} account for {this.props.user.name}</p>
         <p> Balance: {this.props.account.balance}</p>
-        <button onClick={this.openWithdrawl}  className="btn">Withdraw Funds</button>
-        <Link className="btn"  to={`/users/${this.props.user.id}`} >Back to User</Link>
-        <Link className="btn"  to="/users" >Back to List of Users</Link>
+        <button onClick={this.openWithdrawl}  className="btn-primary">Withdraw Funds</button>
+        <Link   to={`/users/${this.props.user.id}`}><button className="btn-btn" style={{marginLeft: '1vw' }} >Back to {this.props.user.name} account </button></Link>
+        <Link   to="/users" ><button className="btn-btn" style={{marginLeft: '1vw' }}>Back to List of Users</button></Link>
         </div>
         <div className="transaction">
           {output}
