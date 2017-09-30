@@ -2,10 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+
 
 .App-header {
   background-color: #222;
@@ -22,16 +19,52 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 .transaction_box{
-  margin-top: 3vw;
+  /*margin-top: 3vw;*/
 }
 .navigation_content{
   margin-left: 3vw;
+  height: 2vw;
 }
 .nav_button{
   margin-left: 2vw;
+}
+.main{
+  padding-top: 12vw;
+  padding-right: 8vw;
+  height: 42vw;
+  background-image: url('../images/IMG_5121.png');
+  background-size: 1280px 1300px;
+  background-repeat: no-repeat;
+  background-position: 0 -210px ;
+}
+.whole_view{
+
+  background-color: tan;
+  /*height: 100%;*/
+}
+.jumbotron{
+  padding-left: 1vw;
+  color: green;
+  background-color: black;
+  margin-top: 3vw;
+  margin-left: 23vw;
+  border: 2px solid darkgrey;
+  border-radius: 6%;
+  height:  25vw;
+  width: 44vw;
+}
+.navigation_content{
+}
+.btn-primary{
+  margin-left: 2vw;
+  margin-bottom: 1vw;
+  /*color: green;*/
+}
+.account{
+  /*margin-top: 0;*/
+  height: 9vw;
+}
+.transaction{
+  /*margin-top: 0vw;*/
 }

@@ -27,15 +27,17 @@ class AccountDetail extends Component{
         console.log(this.props.user, "this is user&&&&&&&&&&&&&&&");
     return(
       <div>
-      <div>
-        <h1>Account Information</h1>
+      <div className="account">
+        <h3>Account Information</h3>
         <p> {this.props.account.accountType} account for {this.props.user.name}</p>
         <p> Balance: {this.props.account.balance}</p>
-        <button onClick={this.openWithdrawl} style={{backgroundColor: 'red'}} className="btn btn-primary">Withdraw Funds</button>
-        <Link className="btn btn-primary" to={`/users/${this.props.user.id}`} >Back to User</Link>
-        <Link className="btn btn-primary" to="/users" >Back to List of Users</Link>
+        <button onClick={this.openWithdrawl}  className="btn">Withdraw Funds</button>
+        <Link className="btn"  to={`/users/${this.props.user.id}`} >Back to User</Link>
+        <Link className="btn"  to="/users" >Back to List of Users</Link>
         </div>
+        <div className="transaction">
           {output}
+          </div>
         </div>
       )
     }

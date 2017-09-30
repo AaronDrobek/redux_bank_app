@@ -10,14 +10,14 @@ class App extends Component {
   render() {
     return (
 
-        <div className="main">
-          <div className= "jumbotron">
+        <div className="">
+          <div className= "">
             <h1 className= "display-3">BankShot</h1>
-            <p className= "lead">Your world wide banking leader.</p>
+            <p className= "lead">Your world wide banking leader.......Sort of.</p>
             <hr className= "my-4"/>
-            <p>Quick, fast, and sometimes accurate account results.</p>
+            <p>Quick, fast, and sometimes accurate account results. </p>
             <p className= "lead">
-              <Link className= "btn btn-primary btn-lg" to="/users" role="button">Check Users</Link>
+              <Link style={{color: 'green', textDecoration: "none"}} className= "" to="/users" role="button">*Click here for a list of accounts to access*</Link>
               </p>
             </div>
         </div>

@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux';
-import {USER_SELECTED, ACCOUNT_SELECTED, WITHDRAW_FUNDS} from '../actions/index';
+import {USER_SELECTED, ACCOUNT_SELECTED, WITHDRAW_FUNDS, DEPOSIT_FUNDS} from '../actions/index';
 import userList from '../data/users';
 import update from 'immutability-helper';
+
 
 const initialState = {
     users: userList(),
@@ -9,6 +10,7 @@ const initialState = {
     selectedAccount: null
 
 }
+
 
 const reducer = function(state = initialState, action) {
     switch (action.type) {
@@ -50,9 +52,31 @@ const reducer = function(state = initialState, action) {
                     }
                 }
             })
+            case DEPOSIT_FUNDS:
+                const userIdxL = state.users.findIndex(user => user._id === state.selectedUser._id);
+                const accountIdxL = state.users[userIdxL].accounts.findIndex(account => account.id === state.selectedAccount.id);
+                console.log(userIdxL, "this is user._id %%%%%%%%%%%%%%%%reducers");
+                console.log(accountIdxL, "this is account.id%%%%%%%%%%%%reducers");
+                return update(state, {
+                    users: {
+                        [userIdxL]: {
+                            accounts: {
+                                [accountIdxL]: {
+                                    balance: {
+                                        $apply: function(balance) {
+                                          console.log("NEW BALANCE!!!!", balance + action.payload);
+                                            return balance + action.payload
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                })
         default:
             return state;
     }
 }
+
 
 export default reducer;

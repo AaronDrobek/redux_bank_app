@@ -1,6 +1,7 @@
 export const USER_SELECTED = "USER_SELECTED";
 export const ACCOUNT_SELECTED = "ACCOUNT_SELECTED";
 export const WITHDRAW_FUNDS = "WITHDRAW_FUNDS";
+export const DEPOSIT_FUNDS = "DEPOSIT_FUNDS";
 
 export function selectUser(userId) {
   return {
@@ -26,6 +27,14 @@ payload: accountId
 export function withdrawFunds(amount) {
   return {
     type: WITHDRAW_FUNDS,
+    //need to change the amount to an integer value
+    payload: parseInt(amount, 10)
+  }
+}
+
+export function depositFunds(amount) {
+  return {
+    type: DEPOSIT_FUNDS,
     //need to change the amount to an integer value
     payload: parseInt(amount, 10)
   }
