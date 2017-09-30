@@ -26,7 +26,7 @@ class UserList extends Component {
               <ul className="list-group-item" >
                 {users}
               </ul>
-              <Link to="/"><button className='btn-btn'>Home</button></Link>
+              <Link to="/"><button style={{marginLeft: '2vw' }} className='btn-btn'>Home</button></Link>
             </div>
         );
     }

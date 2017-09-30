@@ -49,17 +49,23 @@
   padding-left: 1vw;
   color: green;
   background-color: black;
-  margin-top: 3vw;
+  margin-top: 2.5vw;
   margin-left: 23vw;
   border: 2px solid darkgrey;
   border-radius: 6%;
   height:  26vw;
   width: 44vw;
 }
+.card-block{
+  margin-top: 0;
+}
+.card-title{
+  margin-top: 1vw;
+}
 .navigation_content{
 }
 .btn-primary{
-   outline:none !important;
+  outline:none !important;
   margin-left: 2vw;
   margin-bottom: 1vw;
   background-color: green;
@@ -78,6 +84,6 @@
 .list-group-item{
   color: green;
   text-decoration: none;
-  padding-top: 1vw;
+  padding-top: .5vw;
 
 }
