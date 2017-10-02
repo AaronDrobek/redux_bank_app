@@ -13,7 +13,7 @@ class App extends Component {
         <div className="">
           <div className= "">
             <h1 className= "display-3">BankShot</h1>
-            <p className= "lead">Your world wide banking leader.......Sort of.</p>
+            <p className= "lead">Use at your own risk.</p>
             <hr className= "my-4"/>
             <p>Quick, fast, and sometimes accurate account results. </p>
             <p className= "lead">

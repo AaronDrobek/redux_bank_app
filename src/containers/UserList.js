@@ -22,7 +22,7 @@ class UserList extends Component {
         return (
 
             <div className="">
-              <h5>Users with open accounts:</h5>
+              <h3>Users with open accounts:</h3>
               <ul className="list-group-item" >
                 {users}
               </ul>
