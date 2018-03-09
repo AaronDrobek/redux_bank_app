@@ -2,6 +2,7 @@
   "name": "redux_bank_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aarondrobek.github.io/redux_bank_app/",
   "dependencies": {
     "immutability-helper": "^2.4.0",
     "react": "^16.0.0",
@@ -12,9 +13,14 @@
     "redux": "^3.7.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
